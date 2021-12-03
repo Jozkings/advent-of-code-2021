@@ -1,5 +1,5 @@
-# advent-of-code-2020
-My solutions for Advent of Code 2020 tasks
+# advent-of-code-2021
+My solutions for Advent of Code 2021 tasks
 
 Not optimized or pretty solutions - cleaned codes only to be readable for other coders.
 
