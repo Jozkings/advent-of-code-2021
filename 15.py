@@ -16,7 +16,7 @@ def dijkstra(cave, repeat=1):
     result = [[DUMMY for _ in range(repeat * max_column)] for _ in range(repeat * max_row)]
     heap = [(0, 0, 0)]
     while heap:
-        row, column, distance = heappop(heap)
+        distance, row, column = heappop(heap)
         if not ((0 <= row < repeat * max_row) and (0 <= column < repeat * max_column)):
             continue
 
@@ -34,7 +34,7 @@ def dijkstra(cave, repeat=1):
 
         for neigh_x, neigh_y in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
             new_row, new_column = row + neigh_x, column + neigh_y
-            heappush(heap, (new_row, new_column, result[row][column]))
+            heappush(heap, (result[row][column], new_row, new_column))
     return result[repeat * max_row-1][repeat * max_column-1] - cave[0][0]
 
 
