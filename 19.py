@@ -1,5 +1,4 @@
 from collections import defaultdict as dd
-import time
 
 FILE_NAME = 'input19.in'
 
@@ -25,7 +24,7 @@ def get_number_of_beacons():
 
 
 def get_manhattan_distance(first, second):
-    distances = [abs(first[index]-second[index]) for index in range(len(first))]
+    distances = [abs(first[index] - second[index]) for index in range(len(first))]
     return sum(distances)
 
 
@@ -51,6 +50,7 @@ def find_overlapping(first_beacons, second_beacons):
                         all_distances.append(new_remaps)
                         return remapped
     return None
+
 
 with open(FILE_NAME, 'r') as file:
     for line in file:
