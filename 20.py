@@ -70,8 +70,8 @@ for step in range(STEPS):
 
     #print_image(input_image_dict, min_row, min_column, max_row, max_column, background)
     if step == 0 and enhancement_algo[0] == '#' and enhancement_algo[-1] == '#':  #case #, #
-        SPECIALS = ['#', '#']
-
+        SPECIALS = ['#', '#']   #doesn't work in practice (because of infinite space) but
+                               #input is (probably) never in this form; this only shows the idea
 print(sum(pixel == '#' for pixel in input_image_dict.values()))
 
 
